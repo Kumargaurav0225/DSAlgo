@@ -1,4 +1,4 @@
-package com.dsalgo.graphs.bfs;
+package prac.graphs.bfs;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

@@ -1,4 +1,4 @@
-package com.dsalgo.graphs.dfs;
+package prac.graphs.dfs;
 
 import java.util.ArrayList;
 

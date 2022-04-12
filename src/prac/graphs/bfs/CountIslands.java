@@ -1,10 +1,10 @@
-package com.dsalgo.graphs.bfs;
+package prac.graphs.bfs;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class BFSDisconnectedGraph {
+public class CountIslands {
 
     public static void main(String[] args) {
         int V = 7;
@@ -21,8 +21,8 @@ public class BFSDisconnectedGraph {
         addEdge(adj,5,6);
         addEdge(adj,4,6);
 
-        System.out.println("Following is Breadth First Traversal: ");
-        BFSDin(adj,V);
+        System.out.println("Number of islands : "+BFSDin(adj,V));
+
     }
 
     static void addEdge(ArrayList<ArrayList<Integer>> adj, int u, int v) {
@@ -30,15 +30,18 @@ public class BFSDisconnectedGraph {
         adj.get(v).add(u);
     }
 
-    private static void BFSDin(ArrayList<ArrayList<Integer>> adj, int V) {
+    private static int BFSDin(ArrayList<ArrayList<Integer>> adj, int V) {
         boolean[] visited = new boolean[V];
+        int count = 0;
         for (int i=0; i < V; i++)
             visited[i] = false;
         for (int i = 0; i < V; i++) {
             if (!visited[i]){
                 bfs(adj,i,visited);
+                count++;
             }
         }
+        return count;
     }
 
     private static void bfs(ArrayList<ArrayList<Integer>> adj,int s,boolean[] visited) {
@@ -49,7 +52,6 @@ public class BFSDisconnectedGraph {
 
         while (!q.isEmpty()) {
             int u = q.poll();
-            System.out.print(u + " ");
 
             for (int v : adj.get(u)) {
                 if (!visited[v]) {
@@ -61,3 +63,4 @@ public class BFSDisconnectedGraph {
 
     }
 }
+

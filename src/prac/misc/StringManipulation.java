@@ -1,4 +1,4 @@
-package com.misc;
+package prac.misc;
 
 public class StringManipulation {
     public static void main(String[] args) {
