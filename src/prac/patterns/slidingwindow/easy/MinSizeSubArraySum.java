@@ -1,4 +1,4 @@
-package com.patterns.slidingwindow.easy;
+package prac.patterns.slidingwindow.easy;
 
 public class MinSizeSubArraySum {
     public static void main(String[] args) {

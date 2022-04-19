@@ -1,4 +1,4 @@
-package com.patterns.twopointers;
+package prac.patterns.twopointers.easy;
 
 public class RemoveDuplicates {
     public static void main(String[] args) {

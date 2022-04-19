@@ -1,4 +1,4 @@
-package com.patterns.slidingwindow.medium;
+package prac.patterns.slidingwindow.medium;
 
 import java.util.HashMap;
 import java.util.Map;

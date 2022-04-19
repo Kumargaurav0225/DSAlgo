@@ -1,4 +1,4 @@
-package com.patterns.mergeintervals;
+package prac.patterns.mergeintervals.medium;
 
 /**
  * https://leetcode.com/problems/merge-intervals/
@@ -19,7 +19,7 @@ package com.patterns.mergeintervals;
  */
 
 
-import com.patterns.utilities.Interval;
+import prac.patterns.utilities.Interval;
 
 import java.util.ArrayList;
 import java.util.Collections;

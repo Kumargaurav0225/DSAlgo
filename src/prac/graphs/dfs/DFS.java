@@ -23,9 +23,6 @@ class DFS {
 
     static void DFS(ArrayList<ArrayList<Integer>> adj, int V, int s){
         boolean[] visited = new boolean[V];
-        for (int i = 0; i < V; i++)
-            visited[i] = false;
-
         DFSRec(adj,0,visited);
     }
 

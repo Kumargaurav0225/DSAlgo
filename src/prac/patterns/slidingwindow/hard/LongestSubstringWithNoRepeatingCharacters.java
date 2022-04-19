@@ -1,4 +1,4 @@
-package com.patterns.slidingwindow.hard;
+package prac.patterns.slidingwindow.hard;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -6,8 +6,8 @@ import java.util.Map;
 public class LongestSubstringWithNoRepeatingCharacters {
     public static void main(String[] args) {
         System.out.println("Length of the longest substring: " + findLength("aabccbb"));
-//        System.out.println("Length of the longest substring: " + findLength("abbbb"));
-//        System.out.println("Length of the longest substring: " + findLength("abccde"));
+        System.out.println("Length of the longest substring: " + findLength("abbbb"));
+        System.out.println("Length of the longest substring: " + findLength("abccde"));
     }
 
     private static int findLength(String str) {

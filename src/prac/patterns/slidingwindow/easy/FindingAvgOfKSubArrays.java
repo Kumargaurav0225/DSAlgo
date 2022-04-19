@@ -1,4 +1,4 @@
-package com.patterns.slidingwindow.easy;
+package prac.patterns.slidingwindow.easy;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.patterns.twopointers;
+package prac.patterns.twopointers.easy;
 
 import java.util.HashMap;
 

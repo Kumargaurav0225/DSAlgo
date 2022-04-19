@@ -1,10 +1,10 @@
-package com.patterns.utilities;
+package prac.patterns.utilities;
 
-public class Interval {
+public class Meeting {
     public int start;
     public int end;
 
-    public Interval(int start, int end) {
+    public Meeting(int start, int end) {
         this.start = start;
         this.end = end;
     }

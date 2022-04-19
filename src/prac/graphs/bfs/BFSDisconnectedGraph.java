@@ -22,7 +22,7 @@ public class BFSDisconnectedGraph {
         addEdge(adj,4,6);
 
         System.out.println("Following is Breadth First Traversal: ");
-        BFSDin(adj,V);
+        BFSDis(adj,V);
     }
 
     static void addEdge(ArrayList<ArrayList<Integer>> adj, int u, int v) {
@@ -30,7 +30,7 @@ public class BFSDisconnectedGraph {
         adj.get(v).add(u);
     }
 
-    private static void BFSDin(ArrayList<ArrayList<Integer>> adj, int V) {
+    private static void BFSDis(ArrayList<ArrayList<Integer>> adj, int V) {
         boolean[] visited = new boolean[V];
         for (int i=0; i < V; i++)
             visited[i] = false;
