@@ -33,7 +33,7 @@ public class MergeSort {
         for (int j = 0; j < n2; j++)
             right[j] = arr[mIdx + 1 + j];
 
-        int i = 0, j = 0, k = 0;
+        int i = 0, j = 0, k = lIdx;
 
         while (i < n1 && j < n2) {
             if (left[i] <= right[j]) {
