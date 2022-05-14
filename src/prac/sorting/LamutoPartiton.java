@@ -28,6 +28,8 @@ public class LamutoPartiton {
         int temp = arr[i + 1];
         arr[i + 1] = arr[h];
         arr[h] = temp;
-        return i + 1;
+        int partition=i+1;
+        System.out.println("Partition : "+partition);
+        return partition;
     }
 }
