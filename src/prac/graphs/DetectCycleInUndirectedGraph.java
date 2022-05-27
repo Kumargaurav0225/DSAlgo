@@ -13,11 +13,10 @@ public class DetectCycleInUndirectedGraph {
 
         for (int u : adj.get(s)) {
             if (!visited[u]) {
-                if (DFSRec(adj, u, visited, s)) {
+                if (DFSRec(adj, u, visited, s))
                     return true;
-                }
-            } else if (u != parent) {
-                return true;
+                else if (u != parent)
+                    return true;
             }
         }
         return false;

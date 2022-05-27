@@ -33,10 +33,6 @@ public class BFS {
     private static void bfs(ArrayList<ArrayList<Integer>> adj, int V, int s) {
 
         boolean[] visited = new boolean[V];
-        for (int i = 0; i < V; i++) {
-            visited[i] = false;
-        }
-
         Queue<Integer> q = new LinkedList<>();
 
         visited[s] = true;

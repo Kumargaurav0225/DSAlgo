@@ -24,5 +24,6 @@ public class HappyNumber {
     public static void main(String[] args) {
         System.out.println(HappyNumber.find(23));
         System.out.println(HappyNumber.find(12));
+        System.out.println(findSquareSum(12));
     }
 }

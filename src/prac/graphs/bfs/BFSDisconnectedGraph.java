@@ -32,8 +32,6 @@ public class BFSDisconnectedGraph {
 
     private static void BFSDis(ArrayList<ArrayList<Integer>> adj, int V) {
         boolean[] visited = new boolean[V];
-        for (int i=0; i < V; i++)
-            visited[i] = false;
         for (int i = 0; i < V; i++) {
             if (!visited[i]){
                 bfs(adj,i,visited);
