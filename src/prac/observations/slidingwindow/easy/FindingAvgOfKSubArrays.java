@@ -23,7 +23,7 @@ public class FindingAvgOfKSubArrays {
             for (int j = i; j < i+k; j++) {
                 sum +=arr[j];
             }
-            res.add(sum/k*1.0);
+            res.add(sum / k);
         }
         return res;
     }

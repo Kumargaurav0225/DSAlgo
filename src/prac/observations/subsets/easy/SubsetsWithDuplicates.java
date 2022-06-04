@@ -2,7 +2,7 @@ package prac.observations.subsets.easy;
 
 import java.util.*;
 
-class SubsetWithDuplicates {
+class SubsetsWithDuplicates {
 
     public static List<List<Integer>> findSubsets(int[] nums) {
         // sort the numbers to handle duplicates
@@ -29,10 +29,10 @@ class SubsetWithDuplicates {
     }
 
     public static void main(String[] args) {
-        List<List<Integer>> result = SubsetWithDuplicates.findSubsets(new int[] { 1, 3, 3 });
+        List<List<Integer>> result = SubsetsWithDuplicates.findSubsets(new int[] { 1, 3, 3 });
         System.out.println("Here is the list of subsets: " + result);
 
-        result = SubsetWithDuplicates.findSubsets(new int[] { 1, 5, 3, 3 });
+        result = SubsetsWithDuplicates.findSubsets(new int[] { 1, 5, 3, 3 });
         System.out.println("Here is the list of subsets: " + result);
     }
 }

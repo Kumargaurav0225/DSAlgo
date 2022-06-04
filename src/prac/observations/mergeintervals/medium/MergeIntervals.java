@@ -21,10 +21,7 @@ package prac.observations.mergeintervals.medium;
 
 import prac.observations.utilities.Interval;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class MergeIntervals {
 
@@ -38,7 +35,7 @@ public class MergeIntervals {
                                 algorithm has a space complexity of O(N).
      */
     public static List<Interval> merge(List<Interval> intervals) {
-        Collections.sort(intervals, (a, b) -> Integer.compare(a.start, b.start));
+        Collections.sort(intervals, Comparator.comparingInt(a -> a.start));
         LinkedList<Interval> mergedIntervals = new LinkedList<Interval>();
         for (Interval interval : intervals) {
             if (mergedIntervals.isEmpty() || mergedIntervals.getLast().end < interval.start) {
