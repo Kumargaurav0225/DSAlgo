@@ -10,25 +10,28 @@ public class LongestSubstringKDistinct {
         System.out.println("Length of the longest substring: " + findLength("cbbebi", 3));
     }
 
-    private static int findLength(String str, int k) {
-        if (str == null || str.isEmpty())
+    private static int findLength(String str,int k){
+        if (str==null||str.length()==0)
             throw new IllegalArgumentException();
 
-        int maxLength = Integer.MIN_VALUE, windowStart = 0;
+        int windowStart = 0,maxLength = Integer.MIN_VALUE;
+        Map<Character,Integer> charFrequency = new HashMap<>();
+        // In the following loop we'll try to extend the range [ windowStart, windowEnd ]
 
-        Map<Character, Integer> charFrequency = new HashMap<>();
         for (int windowEnd = 0; windowEnd < str.length(); windowEnd++) {
-
             char rightChar = str.charAt(windowEnd);
-            charFrequency.put(rightChar, charFrequency.getOrDefault(rightChar, 0) + 1);
-            while (charFrequency.size() > k) {
+            charFrequency.put(rightChar,charFrequency.getOrDefault(rightChar,0)+1);
+            // Shrink the sliding window, until we are left with 'k' distinct characters in the frequency map
+
+            while (charFrequency.size()>k){
                 char leftChar = str.charAt(windowStart);
-                charFrequency.put(leftChar, charFrequency.get(leftChar) - 1);
-                if (charFrequency.get(leftChar) == 0)
+                charFrequency.put(leftChar,charFrequency.get(leftChar)-1);
+                if (charFrequency.get(leftChar)==0){
                     charFrequency.remove(leftChar);
-                windowStart++;
+                }
+                windowStart++; // Shrink the window
             }
-            maxLength = Math.max(maxLength, windowEnd - windowStart + 1);
+            maxLength = Math.max(maxLength,windowEnd-windowStart+1); // remember the max length so far
         }
         return maxLength;
     }

@@ -21,9 +21,9 @@ public class MergeSort {
         }
     }
 
-    static void merge(int arr[], int lIdx, int mIdx, int rId) {
+    static void merge(int arr[], int lIdx, int mIdx, int rIdx) {
 
-        int n1 = mIdx - lIdx + 1, n2 = rId - mIdx;
+        int n1 = mIdx - lIdx + 1, n2 = rIdx - mIdx;
 
         int[] left = new int[n1];
         int[] right = new int[n2];

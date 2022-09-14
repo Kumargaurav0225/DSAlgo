@@ -16,13 +16,13 @@ public class LongestSubstringWithNoRepeatingCharacters {
         // try to extend the range [windowStart, windowEnd]
         for (int windowEnd = 0; windowEnd < str.length(); windowEnd++) {
             char rightChar = str.charAt(windowEnd);
-            if (charIndexMap.containsKey(rightChar)){
-                windowStart = Math.max(windowStart,charIndexMap.get(rightChar)+1);
-            }
-            charIndexMap.put(rightChar,windowEnd);
-            maxLength = Math.max(maxLength,windowEnd-windowStart+1);
-        }
 
+            if (charIndexMap.containsKey(rightChar))
+                windowStart = Math.max(windowStart, charIndexMap.get(rightChar));
+
+            charIndexMap.put(rightChar, windowEnd);
+            maxLength = Math.max(maxLength, windowEnd - windowStart + 1);
+        }
         return maxLength;
     }
 }

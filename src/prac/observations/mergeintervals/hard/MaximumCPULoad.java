@@ -21,8 +21,8 @@ public class MaximumCPULoad {
             return 0;
 
         int currentLoad = 0, maxLoad = 0;
-        Collections.sort(jobs, (a, b) -> Integer.compare(a.start, b.start));
-        PriorityQueue<Job> minHeap = new PriorityQueue<>((a, b) -> Integer.compare(a.end, b.end));
+        Collections.sort(jobs, Comparator.comparingInt(a -> a.start));
+        PriorityQueue<Job> minHeap = new PriorityQueue<>(Comparator.comparingInt(a -> a.end));
 
         for (Job currentJob : jobs) {
             while (!minHeap.isEmpty() && currentJob.start > minHeap.peek().end)
