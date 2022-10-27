@@ -1,5 +1,6 @@
 ### Intellij Idea ###
 .idea
+.out/
 *.iws
 *.iml
 *.ipr
