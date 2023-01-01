@@ -40,13 +40,13 @@ public class TwoSum {
         return new int[]{-1,-1};
     }
 
-    private static int[] hashSearch(int[] arr,int target){
+    private static int[] hashSearch(int[] nums,int target){
         HashMap<Integer,Integer> map = new HashMap<>();
-        for (int i = 0; i < arr.length; i++) {
-            if (map.containsKey(target-arr[i])){
-                return new int[]{map.get(target-arr[i]),i};
+        for (int i = 0; i < nums.length; i++) {
+            if (map.containsKey(target-nums[i])){
+                return new int[]{map.get(target-nums[i]),i};
             }
-            map.put(arr[i],i);
+            map.put(nums[i],i);
         }
         return new int[]{-1,-1};
     }
